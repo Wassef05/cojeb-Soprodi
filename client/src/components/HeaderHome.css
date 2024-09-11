@@ -1,0 +1,35 @@
+/* Remplacer la police Deutschlands par une police simple */
+.simple-font {
+    font-family: 'Arial', sans-serif; /* Remplacer par une police simple */
+  }
+  
+  .textDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it takes full height of the parent */
+    text-align: center;
+    margin-left: -20px;
+  }
+  
+  .textDiv h1 {
+    color: #3d3d3d; /* A clearer, more readable color */
+    font-size: 2rem !important;
+    font-family: 'Arial', sans-serif !important; /* Police simple ici */
+    font-weight: 600;
+    line-height: 4rem;
+  }
+  
+  .cursor {
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+  }
+  
