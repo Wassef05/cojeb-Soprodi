@@ -35,12 +35,37 @@ export default function NavComp() {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse className="sm:w-[50vw] md:flex md:flex-row items-center justify-center md:mx-auto text-center pt-1">
-          <a className="text-md lg:text-base font-poppins mr-4" href="/">ACCUEIL</a>
-          <a className="text-md lg:text-base font-poppins mr-4" href="#apropos">A PROPOS</a>
-          <a className="text-md lg:text-base font-poppins mr-4" href="#locaux">LES LOCAUX</a>
-          <a className="text-md lg:text-base font-poppins mr-4" href="#contact">CONTACT</a>
+          <a
+            className="text-md lg:text-base font-poppins mr-4 transition-all duration-300 border-b-2 border-transparent hover:text-blue-500 hover:border-blue-500"
+            href="/"
+          >
+            ACCUEIL
+          </a>
+          <a
+            className="text-md lg:text-base font-poppins mr-4 transition-all duration-300 border-b-2 border-transparent hover:text-blue-500 hover:border-blue-500"
+            href="#apropos"
+          >
+            A PROPOS
+          </a>
+          <a
+            className="text-md lg:text-base font-poppins mr-4 transition-all duration-300 border-b-2 border-transparent hover:text-blue-500 hover:border-blue-500"
+            href="#locaux"
+          >
+            LES LOCAUX
+          </a>
+          <a
+            className="text-md lg:text-base font-poppins mr-4 transition-all duration-300 border-b-2 border-transparent hover:text-blue-500 hover:border-blue-500"
+            href="#contact"
+          >
+            CONTACT
+          </a>
           {currentUser ? (
-            <NavLink className="text-md lg:text-base font-poppins" to="/profile">ADMIN</NavLink>
+            <NavLink
+              className="text-md lg:text-base font-poppins transition-all duration-300 border-b-2 border-transparent hover:text-blue-500 hover:border-blue-500"
+              to="/profile"
+            >
+              ADMIN
+            </NavLink>
           ) : (
             <div></div>
           )}

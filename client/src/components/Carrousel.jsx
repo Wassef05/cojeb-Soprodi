@@ -129,12 +129,26 @@ export default function Carrousel() {
   }
 
   return (
-    <section className="py-6 h-[52vw] bg-[#323232]" id="locaux" name="locaux">
-      <h1 className=" px-24 pb-12 pt-12 text-5xl font-poppin text-white">LOCAUX</h1>
-      <div className="mx-8 relative ">
-        <Slider {...settings} className="z-10 relative px-10 gap-3 pb-20">
+    <section
+      className="py-6 h-auto bg-[#323232]" // Adjust height for better mobile experience
+      id="locaux"
+      name="locaux"
+      style={{
+        fontFamily: '"Playfair Display", serif',
+        fontSize: "1rem",
+        textAlign: "justify",
+      }}
+    >
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#F5B94C] text-center mb-6 sm:mb-8">
+        LOCAUX
+      </h1>
+      <div className="mx-4 sm:mx-6 lg:mx-8 relative"> {/* Reduced padding for better mobile view */}
+        <Slider {...settings} className="z-10 relative px-4 sm:px-6 gap-3 pb-20">
           {postsListings.map((post) => {
-            const imageUrl = post.images.length > 0 ? post.images[0].url : 'path/to/default-image.jpg';
+            const imageUrl =
+              post.images.length > 0
+                ? post.images[0].url
+                : "path/to/default-image.jpg";
 
             return (
               <PostCard

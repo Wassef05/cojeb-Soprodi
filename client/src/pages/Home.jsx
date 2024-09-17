@@ -7,7 +7,7 @@ import NavComp from "../components/NavComp";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full max-w-full overflow-x-hidden" >
       <NavComp />
       <HeaderHome/>
       <Card1/>

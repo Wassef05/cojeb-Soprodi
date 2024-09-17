@@ -36,7 +36,7 @@ export default function HeaderHome() {
       >
         <div
           className="absolute bottom-60 sm:bottom-16 left-0 w-full md:mb-0"
-          style={{ marginBottom: '-90px', marginLeft: '-50px' }}
+          style={{ marginBottom: '-90px', marginLeft: '-100px' }}
         >
           <div
             className="p-1 w-3/4 md:w-1/2 sm:p-6 md:p-12 mt-8 ml-4 md:ml-12 bg-[#fff]/30 rounded-lg"
