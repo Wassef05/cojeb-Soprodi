@@ -19,14 +19,19 @@ export default function Card1() {
     <section
       id="apropos"
       name="apropos"
-      className="relative w-full min-h-screen bg-white overflow-hidden mb-0" // Ajout de mb-12 pour l'espacement
+      className="relative w-full min-h-screen bg-white overflow-hidden"
     >
       <div
-        style={{ backgroundImage: `url(${cov})` }}
-        className="absolute bottom-0 w-full h-full sm:h-3/5 bg-cover bg-center bg-no-repeat -ml-12"
+        style={{ 
+          backgroundImage: `url(${cov})`, 
+          bottom: '0', 
+          left: '48px', 
+          position: 'absolute' // Assurez-vous que position est définie
+        }}
+        className="w-full h-full sm:h-3/5 bg-cover bg-center bg-no-repeat -ml-12"
       ></div>
-
-      <div className="relative z-10 p-4 sm:p-8 flex flex-col sm:flex-row flex-wrap justify-around items-center mb-12"> {/* Ajout de mb-12 pour l'espacement */}
+      
+      <div className="relative z-10 p-4 sm:p-8 flex flex-col sm:flex-row flex-wrap justify-around items-center mb-12">
         {/* Texte section */}
         <div
           className="text-[#000000] max-w-prose w-full sm:w-1/2 lg:pl-28"

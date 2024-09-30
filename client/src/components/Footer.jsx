@@ -171,15 +171,16 @@ const Footer = () => {
       </div>
 
       <section className="bg-[#2c3e50] text-white text-sm">
-        <div className="container mx-auto flex justify-between items-center p-4">
-          <p>© 2024 SOPRODI - Tous droits réservés</p>
-          <ul className="flex space-x-4">
-            <li className="cursor-pointer">Conditions générales d'utilisation</li>
-            <li className="cursor-pointer">Politique de confidentialité</li>
-            <li className="cursor-pointer">SOPRODI</li>
-          </ul>
-        </div>
-      </section>
+  <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center p-4">
+    <p className="text-center sm:text-left">© 2024 SOPRODI - Tous droits réservés</p>
+    <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+      <li className="cursor-pointer">Conditions générales d'utilisation</li>
+      <li className="cursor-pointer">Politique de confidentialité</li>
+      <li className="cursor-pointer">SOPRODI</li>
+    </ul>
+  </div>
+</section>
+
 
       {/* Modal */}
       <Modal open={openModal} onClose={handleCloseModal}>
