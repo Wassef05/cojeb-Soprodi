@@ -78,9 +78,9 @@ export default function ModalComponent({ isOpen, onClose, content }) {
       onRequestClose={onClose}
       style={{
         overlay: {
-          backgroundColor: 'rgba(0, 0, 0, 0.9)', // Darker background
-          backdropFilter: 'blur(8px)', // Background blur
-          zIndex: 9999, // Ensure it's on top of everything
+          backgroundColor: 'rgba(0, 0, 0, 0.9)', 
+          backdropFilter: 'blur(8px)', 
+          zIndex: 9999, 
         },
         content: {
           top: '50%',
@@ -92,15 +92,17 @@ export default function ModalComponent({ isOpen, onClose, content }) {
           backgroundColor: '#000',
           color: '#fff',
           borderRadius: '10px',
-          width: '400px',
+          width: '90%',  
+          maxWidth: '600px', 
           padding: '20px',
           textAlign: 'left',
-          zIndex: 10000, // Ensures it's above the overlay
+          zIndex: 10000, 
+          overflow: 'auto', 
         },
       }}
     >
       <div>
-        <h2 className="text-3xl text-[#F5B94C] font-semibold mb-4">À propos de nous</h2>
+        <h2 className="text-2xl md:text-3xl text-[#F5B94C] font-semibold mb-4">À propos de nous</h2>
         <div className="text-sm">
           {content.split('\n').map((text, index) => (
             <p key={index} className="mb-2">

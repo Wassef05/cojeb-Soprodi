@@ -19,13 +19,14 @@ export default function Card1() {
     <section
       id="apropos"
       name="apropos"
-      className="relative mt-0 w-full min-h-screen bg-white overflow-hidden"
+      className="relative w-full min-h-screen bg-white overflow-hidden mb-0" // Ajout de mb-12 pour l'espacement
     >
       <div
         style={{ backgroundImage: `url(${cov})` }}
-        className="absolute bottom-0 w-full h-full sm:h-3/5 bg-contain bg-center bg-no-repeat"
+        className="absolute bottom-0 w-full h-full sm:h-3/5 bg-cover bg-center bg-no-repeat -ml-12"
       ></div>
-      <div className="relative z-10 p-4 sm:p-8 flex flex-col sm:flex-row flex-wrap justify-around items-center">
+
+      <div className="relative z-10 p-4 sm:p-8 flex flex-col sm:flex-row flex-wrap justify-around items-center mb-12"> {/* Ajout de mb-12 pour l'espacement */}
         {/* Texte section */}
         <div
           className="text-[#000000] max-w-prose w-full sm:w-1/2 lg:pl-28"
@@ -56,14 +57,12 @@ export default function Card1() {
 
         {/* Image section */}
         <div className="w-full sm:w-1/2 mt-6 lg:mt-0 flex justify-center lg:justify-end">
-  <img
-    src={car}
-    alt="Card image"
-    className="rounded-[30px] w-3/4 sm:w-3/4 lg:w-[22vw] h-auto shadow-3xl lg:shadow-[0px_10px_30px_rgba(0,0,0,0.4)] transition-transform duration-500 hover:scale-105 lg:mr-[10%]"
-  />
-</div>
-
-
+          <img
+            src={car}
+            alt="Card image"
+            className="rounded-[30px] w-3/4 sm:w-3/4 lg:w-[22vw] h-auto shadow-3xl lg:shadow-[0px_10px_30px_rgba(0,0,0,0.4)] transition-transform duration-500 hover:scale-105 lg:mr-[10%]"
+          />
+        </div>
       </div>
 
       {/* Modal */}

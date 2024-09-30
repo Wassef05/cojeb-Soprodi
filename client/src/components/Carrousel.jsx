@@ -124,9 +124,15 @@ export default function Carrousel() {
     return <div className="text-center mt-10">Loading...</div>;
   }
 
-  if (!Array.isArray(postsListings) || postsListings.length === 0) {
-    return <div className="text-center mt-10">No posts available.</div>;
-  }
+if (!Array.isArray(postsListings) || postsListings.length === 0) {
+  return (
+    <div className="text-center mt-10 text-gray-600">
+      <p className="text-lg font-semibold">Aucun contenu disponible pour le moment.</p>
+      <p className="text-sm">Veuillez revenir plus tard ou contactez-nous pour plus d'informations.</p>
+    </div>
+  );
+}
+
 
   return (
     <section
