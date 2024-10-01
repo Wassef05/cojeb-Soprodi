@@ -24,7 +24,7 @@ const SingIn = () => {
     const onSubmit = async (formData) => {
         dispatch(loddingStart())
         try {
-            const res = await fetch('http://localhost:4000/soprodi/auth/signin', {
+            const res = await fetch('https://cogeb-soprodi-api.onrender.com/soprodi/auth/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -60,7 +60,7 @@ const SingIn = () => {
     };
     const handleLogOut = async () => {
         try {
-          const res = await fetch("http://localhost:4000/soprodi/auth/signout");
+          const res = await fetch("https://cogeb-soprodi-api.onrender.com/soprodi/auth/signout");
           const data = await res.json();
           if (data.success === false) {
             dispatch(signoutFailed(data.message));

@@ -104,7 +104,7 @@ const CreatePost = () => {
 
 
     try {
-      const response = await axios.post('http://localhost:4000/soprodi/posts', cleanedFormData);
+      const response = await axios.post('https://cogeb-soprodi-api.onrender.com/soprodi/posts', cleanedFormData);
       alert("post created");
       Navigate('/profile');
     } catch (error) {

@@ -17,7 +17,7 @@ function Items() {
 
   const loadPost = async () => {
     try {
-      const res = await fetch(`http://localhost:4000/soprodi/posts/${id}`);
+      const res = await fetch(`https://cogeb-soprodi-api.onrender.com/soprodi/posts/${id}`);
       const data = await res.json();
       if (data.success === false) {
         toast.error(data.message, { autoClose: 2000 });

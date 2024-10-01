@@ -33,7 +33,7 @@ const UpdatePost = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/soprodi/posts/${id}`);
+        const response = await axios.get(`https://cogeb-soprodi-api.onrender.com/soprodi/posts/${id}`);
         setFormData(response.data);
       } catch (error) {
         console.error('Error fetching post data:', error);
@@ -118,7 +118,7 @@ const UpdatePost = () => {
 
 
     try {
-      const response = await axios.put(`http://localhost:4000/soprodi/posts/${id}`, cleanedFormData);
+      const response = await axios.put(`https://cogeb-soprodi-api.onrender.com/soprodi/posts/${id}`, cleanedFormData);
       alert("post updated");
       Navigate('/profile');    } 
       catch (error) {

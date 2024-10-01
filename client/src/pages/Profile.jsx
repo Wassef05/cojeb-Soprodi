@@ -89,7 +89,7 @@ const Profile = () => {
     // setLoading(true)
     try {
       dispatch(loddingStart());
-      const res = await fetch(`http://localhost:4000/soprodi/users/update/${currentUser._id}`, {
+      const res = await fetch(`https://cogeb-soprodi-api.onrender.com/soprodi/users/update/${currentUser._id}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -121,7 +121,7 @@ const Profile = () => {
   const handleDelete = async () => {
     try {
       dispatch(loddingStart());
-      const res = await fetch(`http://localhost:4000/soprodi/users/delete/${currentUser._id}`, {
+      const res = await fetch(`https://cogeb-soprodi-api.onrender.com/soprodi/users/delete/${currentUser._id}`, {
         method: "DELETE",
       });
       const resData = await res.json();
@@ -146,7 +146,7 @@ const Profile = () => {
 
   const handleLogOut = async () => {
     try {
-      const res = await fetch("http://localhost:4000/soprodi/auth/signout");
+      const res = await fetch("https://cogeb-soprodi-api.onrender.com/soprodi/auth/signout");
       const data = await res.json();
       if (data.success === false) {
         dispatch(signoutFailed(data.message));
@@ -171,7 +171,7 @@ const Profile = () => {
     try {
       setUserPostLoading(true);
       const res = await fetch(
-        `http://localhost:4000/soprodi/posts`
+        `https://cogeb-soprodi-api.onrender.com/soprodi/posts`
       );
     
       const data = await res.json();
@@ -203,7 +203,7 @@ const Profile = () => {
 
   const handlePostDelete = async (postId) => {
     try {
-      const res = await fetch(`http://localhost:4000/soprodi/posts/${postId}`, {
+      const res = await fetch(`https://cogeb-soprodi-api.onrender.com/soprodi/posts/${postId}`, {
         method: "DELETE",
       });
 
