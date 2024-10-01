@@ -56,7 +56,7 @@ export default function Carrousel() {
     (async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/soprodi/posts/`);
+        const res = await fetch(`https://cogeb-soprodi-api.onrender.com/soprodi/posts/`);
 
         const contentType = res.headers.get("content-type");
         if (res.ok && contentType && contentType.includes("application/json")) {
