@@ -10,10 +10,22 @@ export default defineConfig({
       '/soprodi': {
         target: 'https://cogeb-soprodi-api.onrender.com',
         secure: false,
-        changeOrigin: true, 
-
+        changeOrigin: true,
       },
     },
   },
   plugins: [react()],
+  build: {
+    chunkSizeWarningLimit: 1000, 
+    rollupOptions: {
+      output: {
+       // Séparation des dépendances principales en un chunk séparé
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'; // Créer un chunk 'vendor' pour les modules externes
+          }
+        },
+      },
+    },
+  },
 });
